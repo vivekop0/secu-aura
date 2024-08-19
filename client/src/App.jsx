@@ -1,9 +1,10 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Signupage } from './pages/signupage';
-import { Loginpage } from './pages/loginpage';
-import { DashboardPage } from './pages/dashboard';
+
+import { Loginpage } from './pages/Loginpage';
+import { DashboardPage } from './pages/Dashboard';
 import  { isAuthenticated } from './components/ProtectedRoute'; // Import the ProtectedRoute component
+import { Signupage } from './pages/Signupage';
 
 export const App = () => {
  
