@@ -7,7 +7,8 @@ const HospitalTable = ({ hospitals }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState([
     {  status: 'active' },
-    { status: 'inactive' },
+    
+    
     // other hospital entries
   ]);
   const hospitalsPerPage = 5;
@@ -42,14 +43,15 @@ const HospitalTable = ({ hospitals }) => {
 
   // Handle status change
   const handleStatusChange = (index, newStatus) => {
-    // Assuming you have a state variable `hospitals` to manage the list
     setStatus((prevHospitals) => {
-      // Create a new array with updated status
-      const updatedHospitals = [...prevHospitals];
-      updatedHospitals[index].status = newStatus;
+      // Create a new array with the updated status for the specific hospital
+      const updatedHospitals = prevHospitals.map((hospital, i) =>
+        i === index ? { ...hospital, status: newStatus } : hospital
+      );
       return updatedHospitals;
     });
   };
+  
   
   return (
     <div className="container mx-auto p-4">

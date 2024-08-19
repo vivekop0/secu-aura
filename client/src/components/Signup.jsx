@@ -39,7 +39,7 @@ export const Signup = () => {
     });
 
     try {
-      const response = await axios.post("http://localhost:5000/api/users/register", formDataToSubmit, {
+      const response = await axios.post("https://server-h6oh.onrender.com/api/users/register", formDataToSubmit, {
         withCredentials: true,
         headers: {
           "Content-Type": "multipart/form-data"

@@ -116,7 +116,7 @@ export const Dashboard = () => {
         // Define a function to fetch data
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/users/data',{withCredentials:true }); // Replace with your API endpoint
+                const response = await axios.get('https://server-h6oh.onrender.com/api/users/data',{withCredentials:true }); // Replace with your API endpoint
                 setData(response.data); 
                 console.log(response.data)// Set the data in state
             } catch (err) {
